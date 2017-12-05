@@ -6,7 +6,5 @@
 
 	function HomeController(){
 		let homeCtrl = this
-
-		console.log('@ homeCtrl')
 	}
 })()

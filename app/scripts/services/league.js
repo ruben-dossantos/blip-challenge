@@ -12,14 +12,14 @@
 			return $http.get(
 				ApiPath + '/leagues', 
 				{ params: {api_token: ApiToken}}
-				).then(response => response.data)
+				).then(response => response.data.data)
 		}
 
 		service.getLeague = (id) => {
 			return $http.get(
 				ApiPath + '/leagues/' + id, 
 				{ params: {api_token: ApiToken}}
-				).then((response) => response.data)
+				).then((response) => response.data.data)
 		}
 
 	}

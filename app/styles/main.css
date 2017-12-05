@@ -7,6 +7,7 @@
 
 body {
   padding: 0;
+  font-family: 'Oswald', sans-serif;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -102,4 +103,33 @@ body {
 
 .ui-view-placeholder {
     margin-top: 60px;
+}
+
+.h2-space {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+/* Footer */
+.panel-footer {
+    margin-top: 30px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: #DDDDDD;
+    border-top: 0;
+    color: #000;
+}
+
+.panel-footer p.footer-header{
+    font-family: 'Lobster', cursive;
+}
+
+.panel-footer p.footer-content{
+
+}
+
+.panel-footer p.footer-content span {
+    font-size: 0.9em;
+    color: #aaa;
 }
