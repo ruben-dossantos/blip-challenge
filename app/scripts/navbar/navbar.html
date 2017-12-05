@@ -16,7 +16,7 @@
         <ul class="nav navbar-nav" ng-repeat="league in navbarCtrl.leaguesData">
           <li>
             <a ui-sref="home.standing({seasonId: league.current_season_id, leagueId: league.id})">
-            {{league.name}}
+            {{::league.name}}
           </a>
         </li>
         </ul>

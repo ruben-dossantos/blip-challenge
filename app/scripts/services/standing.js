@@ -17,6 +17,7 @@
 					if(response.data.data.length>0){
 						angular.forEach(response.data.data[0].standings.data, function(team){
 							standing.push({
+								team_id: parseInt(team.team_id),
 								position: parseInt(team.position),
 								team_name: team.team_name,
 								games_played: parseInt(team.overall.games_played),

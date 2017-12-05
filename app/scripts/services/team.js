@@ -1,13 +1,18 @@
-'use strict';
+(function(){
+	'use strict'
 
-/**
- * @ngdoc service
- * @name blipApp.team
- * @description
- * # team
- * Service in the blipApp.
- */
-angular.module('blipApp')
-  .service('team', function () {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-  });
+	angular.module('blipApp')
+	.service('TeamService', TeamService)
+
+	TeamService.$inject = ['$http', 'ApiPath', 'ApiToken']
+	function TeamService($http, ApiPath, ApiToken) {
+		let service = this
+
+		service.getTeam = (teamId) => {
+			return $http.get(
+				ApiPath + '/teams/' + teamId,
+				{ params: { api_token: ApiToken, include: 'squad' } }
+				).then( response => response.data.data )
+		}
+	}
+})()
