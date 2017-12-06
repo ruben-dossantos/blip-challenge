@@ -5,8 +5,8 @@ version 0.16.0.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Rub `npm install` and `bower install` to download dependencies. 
 
-## Testing
+Run `grunt serve` for preview.
 
-Running `grunt test` will run the unit tests with karma.
+`grunt` and `grunt build` are not working because of ES6 implementation.

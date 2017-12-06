@@ -19,6 +19,8 @@ module.exports = function (grunt) {
     cdnify: 'grunt-google-cdn'
   });
 
+  require('load-grunt-tasks')(grunt); 
+
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
@@ -64,6 +66,18 @@ module.exports = function (grunt) {
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
+      }
+    },
+
+    babel: {
+      options: {
+        sourceMap: true,
+        presets: ['env']
+      },
+      dist: {
+        files: {
+          'dist/app.js': 'src/app.js'
+        }
       }
     },
 
@@ -478,6 +492,7 @@ module.exports = function (grunt) {
     'newer:jshint',
     'newer:jscs',
     'test',
+    'babel',
     'build'
   ]);
 };
