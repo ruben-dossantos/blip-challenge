@@ -1,0 +1,16 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Number</th>
+			<th>Name</th>
+			<th>Appearences</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="player in $ctrl.teamData.data">
+			<td>{{:: player.number}}</td>
+			<td><a ng-click="$ctrl.selectPlayer({player})">{{:: player.name ? player.name : 'No Info'}}</a></td>
+			<td>{{:: player.appearences}}</td>
+		</tr>
+	</tbody>
+</table>

@@ -9,7 +9,10 @@
 		let teamModalCtrl = this
 
 		teamModalCtrl.teamData = teamData
-		console.log(teamData)
+
+		teamModalCtrl.selectPlayer = player => teamModalCtrl.playerData = player
+
+		teamModalCtrl.unselectPlayer = () => teamModalCtrl.playerData = undefined
 
 		teamModalCtrl.ok = () => $uibModalInstance.close()
 

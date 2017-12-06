@@ -30,7 +30,7 @@
 		})
 		.state('home.standing', {
 			url: 'league/{leagueId}/standing/{seasonId}',
-			templateUrl: 'scripts/home/standing/standing.html',
+			templateUrl: 'scripts/standing/standing.html',
 			controller: 'StandingController',
 			controllerAs: 'standingCtrl',
 			resolve: {
